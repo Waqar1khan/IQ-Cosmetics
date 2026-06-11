@@ -1,737 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>IQ Cosmetics</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
-<style>
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-  scroll-behavior:smooth;
-}
-
-body{
-  background:#fff;
-  color:#222;
-  overflow-x:hidden;
-}
-
-/* HEADER */
-
-header{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:22px 90px;
-  z-index:1000;
-  background:rgba(0,0,0,0.55);
-  backdrop-filter:blur(14px);
-}
-
-.logo{
-  color:#fff;
-  font-size:42px;
-  font-weight:700;
-  letter-spacing:8px;
-}
-
-nav a{
-  text-decoration:none;
-  color:#fff;
-  margin-left:35px;
-  font-size:15px;
-  position:relative;
-  transition:0.3s;
-}
-
-nav a::after{
-  content:'';
-  position:absolute;
-  left:0;
-  bottom:-6px;
-  width:0;
-  height:2px;
-  background:#d4a373;
-  transition:0.3s;
-}
-
-nav a:hover::after{
-  width:100%;
-}
-
-/* HERO */
-
-.hero{
-  height:100vh;
-  background:
-  linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
-  url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=2200&auto=format&fit=crop');
-  background-size:cover;
-  background-position:center;
-  display:flex;
-  align-items:center;
-  padding:0 90px;
-}
-
-.hero-content{
-  max-width:720px;
-  color:#fff;
-}
-
-.hero-content span{
-  display:inline-block;
-  padding:10px 24px;
-  border-radius:40px;
-  background:rgba(255,255,255,0.1);
-  backdrop-filter:blur(10px);
-  border:1px solid rgba(255,255,255,0.15);
-  margin-bottom:25px;
-  font-size:14px;
-}
-
-.hero-content h1{
-  font-size:92px;
-  line-height:1.05;
-  margin-bottom:25px;
-}
-
-.hero-content p{
-  font-size:18px;
-  line-height:1.9;
-  margin-bottom:35px;
-  max-width:650px;
-}
-
-.hero-buttons{
-  display:flex;
-  gap:20px;
-}
-
-.hero-buttons a{
-  text-decoration:none;
-}
-
-.hero-buttons button{
-  padding:16px 40px;
-  border:none;
-  border-radius:50px;
-  cursor:pointer;
-  font-size:15px;
-  transition:0.3s;
-}
-
-.main-btn{
-  background:#d4a373;
-  color:#fff;
-}
-
-.main-btn:hover{
-  transform:translateY(-4px);
-}
-
-.second-btn{
-  background:rgba(255,255,255,0.12);
-  color:#fff;
-  border:1px solid rgba(255,255,255,0.2);
-}
-
-/* SECTION */
-
-section{
-  padding:110px 90px;
-}
-
-.title{
-  text-align:center;
-  margin-bottom:70px;
-}
-
-.title h2{
-  font-size:52px;
-  margin-bottom:14px;
-}
-
-.title p{
-  color:#666;
-  max-width:760px;
-  margin:auto;
-  line-height:1.8;
-}
-
-/* PRODUCTS */
-
-.products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:35px;
-}
-
-.card{
-  background:#fff;
-  border-radius:28px;
-  overflow:hidden;
-  box-shadow:0 15px 45px rgba(0,0,0,0.08);
-  transition:0.4s;
-}
-
-.card:hover{
-  transform:translateY(-12px);
-}
-
-.card-image{
-  overflow:hidden;
-  position:relative;
-}
-
-.card-image img{
-  width:100%;
-  height:390px;
-  object-fit:cover;
-  transition:0.5s;
-}
-
-.card:hover img{
-  transform:scale(1.08);
-}
-
-.badge{
-  position:absolute;
-  top:18px;
-  left:18px;
-  background:#111;
-  color:#fff;
-  padding:8px 15px;
-  border-radius:40px;
-  font-size:12px;
-}
-
-.card-content{
-  padding:28px;
-}
-
-.card-content h3{
-  font-size:26px;
-  margin-bottom:12px;
-}
-
-.card-content p{
-  color:#666;
-  line-height:1.8;
-  margin-bottom:22px;
-}
-
-.card-content a{
-  text-decoration:none;
-}
-
-.card-content button{
-  padding:13px 28px;
-  border:none;
-  background:#111;
-  color:#fff;
-  border-radius:40px;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.card-content button:hover{
-  background:#d4a373;
-}
-
-/* BANNER */
-
-.banner{
-  height:560px;
-  border-radius:35px;
-  overflow:hidden;
-  background:
-  linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
-  url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=2200&auto=format&fit=crop');
-  background-size:cover;
-  background-position:center;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:#fff;
-}
-
-.banner-content h2{
-  font-size:72px;
-  max-width:900px;
-  line-height:1.2;
-  margin-bottom:30px;
-}
-
-.banner-content a{
-  text-decoration:none;
-}
-
-.banner-content button{
-  padding:16px 40px;
-  border:none;
-  border-radius:50px;
-  background:#fff;
-  color:#111;
-  cursor:pointer;
-  font-size:15px;
-}
-
-/* GALLERY */
-
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:22px;
-}
-
-.gallery a{
-  overflow:hidden;
-  border-radius:25px;
-  display:block;
-}
-
-.gallery img{
-  width:100%;
-  height:360px;
-  object-fit:cover;
-  transition:0.5s;
-}
-
-.gallery a:hover img{
-  transform:scale(1.1);
-}
-
-/* REVIEWS */
-
-.reviews{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:30px;
-}
-
-.review{
-  background:#f8f8f8;
-  padding:40px;
-  border-radius:25px;
-  transition:0.3s;
-}
-
-.review:hover{
-  transform:translateY(-8px);
-}
-
-.review i{
-  font-size:28px;
-  margin-bottom:20px;
-  color:#d4a373;
-}
-
-.review p{
-  line-height:1.9;
-  color:#555;
-  margin-bottom:20px;
-}
-
-.review h4{
-  font-size:18px;
-}
-
-/* CONTACT */
-
-.contact{
-  background:#111;
-  color:#fff;
-  border-radius:35px;
-  padding:80px;
-  text-align:center;
-}
-
-.contact h2{
-  font-size:52px;
-  margin-bottom:20px;
-}
-
-.contact p{
-  color:#bbb;
-  margin-bottom:35px;
-}
-
-.contact input,
-.contact textarea{
-  width:100%;
-  padding:18px;
-  margin-top:16px;
-  border:none;
-  border-radius:14px;
-  font-size:15px;
-}
-
-.contact textarea{
-  height:160px;
-  resize:none;
-}
-
-.contact button{
-  margin-top:22px;
-  padding:16px 42px;
-  border:none;
-  border-radius:50px;
-  background:#d4a373;
-  color:#fff;
-  cursor:pointer;
-  font-size:16px;
-}
-
-/* FOOTER */
-
-footer{
-  background:#000;
-  color:#888;
-  text-align:center;
-  padding:50px 20px;
-}
-
-.socials{
-  margin-bottom:25px;
-}
-
-.socials a{
-  color:#fff;
-  margin:0 12px;
-  font-size:20px;
-  transition:0.3s;
-}
-
-.socials a:hover{
-  color:#d4a373;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-  header{
-    padding:20px 30px;
-  }
-
-  nav{
-    display:none;
-  }
-
-  .hero{
-    padding:0 30px;
-  }
-
-  .hero-content h1{
-    font-size:54px;
-  }
-
-  section{
-    padding:90px 30px;
-  }
-
-  .banner-content h2{
-    font-size:42px;
-  }
-
-  .contact{
-    padding:50px 25px;
-  }
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<!-- HEADER -->
-
-<header>
-
-  <div class="logo">IQ</div>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#products">Products</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-</header>
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-  <div class="hero-content">
-
-    <span>Luxury Beauty Collection</span>
-
-    <h1>Beauty That Looks Premium & Real</h1>
-
-    <p>
-      IQ Cosmetics combines luxury skincare, premium beauty products,
-      and modern elegance designed for confident style and timeless beauty.
-    </p>
-
-    <div class="hero-buttons">
-
-      <a href="#products">
-        <button class="main-btn">
-          Shop Collection
-        </button>
-      </a>
-
-      <a href="#gallery">
-        <button class="second-btn">
-          Explore Brand
-        </button>
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- PRODUCTS -->
-
-<section id="products">
-
-  <div class="title">
-
-    <h2>Featured Products</h2>
-
-    <p>
-      Premium beauty products inspired by luxury fashion and modern skincare.
-    </p>
-
-  </div>
-
-  <div class="products">
-
-    <div class="card">
-
-      <div class="card-image">
-
-        <span class="badge">Best Seller</span>
-
-        <a href="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=2200&auto=format&fit=crop" target="_blank">
-
-          <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=1200&auto=format&fit=crop">
-
-        </a>
-
-      </div>
-
-      <div class="card-content">
-
-        <h3>Velvet Lipstick</h3>
-
-        <p>
-          Luxury matte lipstick with rich elegant finish and smooth texture.
-        </p>
-
-        <a href="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=2200&auto=format&fit=crop" target="_blank">
-
-          <button>View Product</button>
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="card">
-
-      <div class="card-image">
-
-        <span class="badge">Trending</span>
-
-        <a href="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=2200&auto=format&fit=crop" target="_blank">
-
-          <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1200&auto=format&fit=crop">
-
-        </a>
-
-      </div>
-
-      <div class="card-content">
-
-        <h3>Glow Foundation</h3>
-
-        <p>
-          Natural radiant coverage with premium smooth skin finish.
-        </p>
-
-        <a href="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=2200&auto=format&fit=crop" target="_blank">
-
-          <button>View Product</button>
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="card">
-
-      <div class="card-image">
-
-        <span class="badge">Luxury</span>
-
-        <a href="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?q=80&w=2200&auto=format&fit=crop" target="_blank">
-
-          <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?q=80&w=1200&auto=format&fit=crop">
-
-        </a>
-
-      </div>
-
-      <div class="card-content">
-
-        <h3>Luxury Perfume</h3>
-
-        <p>
-          Elegant fragrance inspired by fashion and timeless beauty.
-        </p>
-
-        <a href="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?q=80&w=2200&auto=format&fit=crop" target="_blank">
-
-          <button>View Product</button>
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="card">
-
-      <div class="card-image">
-
-        <span class="badge">New</span>
-
-        <a href="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=2200&auto=format&fit=crop" target="_blank">
-
-          <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1200&auto=format&fit=crop">
-
-        </a>
-
-      </div>
-
-      <div class="card-content">
-
-        <h3>Hydra Skin Serum</h3>
-
-        <p>
-          Deep hydration serum for glowing healthy and smooth skin.
-        </p>
-
-        <a href="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=2200&auto=format&fit=crop" target="_blank">
-
-          <button>View Product</button>
-
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- BANNER -->
-
-<section>
-
-  <div class="banner">
-
-    <div class="banner-content">
-
-      <h2>
-        Inspired By Luxury Fashion & Premium Beauty
-      </h2>
-
-      <a href="#contact">
-
-        <button>
-          Discover More
-        </button>
-
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- GALLERY -->
-
-<section id="gallery">
-
-  <div class="title">
-
-    <h2>Beauty Gallery</h2>
-
-    <p>
-      A premium cosmetics experience designed to feel stylish and authentic.
-    </p>
-
-  </div>
-
-  <div class="gallery">
-
-    <a href="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=2200&auto=format&fit=crop" target="_blank">
-      <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop">
-    </a>
-
-    <a href="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=2200&auto=format&fit=crop" target="_blank">
-      <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1200&auto=format&fit=crop">
-    </a>
-
-    <a href="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2200&auto=format&fit=crop" target="_blank">
-      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop">
-    </a>
-
-    <a href="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=2200&auto=format&fit=crop" target="_blank">
-      <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop">
-    </a>
-
-    <a href="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=2200&auto=format&fit=crop" target="_blank">
-      <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=1200&auto=format&fit=crop">
-    </a>
-
-    <a href="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=2200&auto=format&fit=crop" target="_blank">
-      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop">
-    </a>
-
-  </div>
-
-</section>
-
 <!-- REVIEWS -->
 
 <section id="reviews">
@@ -741,16 +7,123 @@ footer{
     <h2>Customer Reviews</h2>
 
     <p>
-      Trusted by beauty customers who value elegance and premium quality.
+      Trusted by beauty customers who value luxury quality and modern skincare.
     </p>
 
   </div>
+
+  <!-- RATING OVERVIEW -->
+
+  <div style="
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:60px;
+    flex-wrap:wrap;
+    margin-bottom:60px;
+  ">
+
+    <div style="
+      text-align:center;
+      background:#f8f8f8;
+      padding:40px;
+      border-radius:25px;
+      min-width:250px;
+    ">
+
+      <h1 style="
+        font-size:70px;
+        color:#111;
+      ">4.9</h1>
+
+      <div style="
+        color:#d4a373;
+        font-size:24px;
+        margin:10px 0;
+      ">
+        ★★★★★
+      </div>
+
+      <p style="color:#666;">
+        Based on 2,400+ Reviews
+      </p>
+
+    </div>
+
+    <div style="
+      max-width:500px;
+      width:100%;
+    ">
+
+      <div style="margin-bottom:18px;">
+        <p>5 Stars</p>
+
+        <div style="
+          background:#eee;
+          height:12px;
+          border-radius:20px;
+          overflow:hidden;
+        ">
+          <div style="
+            width:92%;
+            height:100%;
+            background:#d4a373;
+          "></div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:18px;">
+        <p>4 Stars</p>
+
+        <div style="
+          background:#eee;
+          height:12px;
+          border-radius:20px;
+          overflow:hidden;
+        ">
+          <div style="
+            width:80%;
+            height:100%;
+            background:#d4a373;
+          "></div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:18px;">
+        <p>3 Stars</p>
+
+        <div style="
+          background:#eee;
+          height:12px;
+          border-radius:20px;
+          overflow:hidden;
+        ">
+          <div style="
+            width:25%;
+            height:100%;
+            background:#d4a373;
+          "></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- REVIEWS -->
 
   <div class="reviews">
 
     <div class="review">
 
       <i class="fa-solid fa-quote-left"></i>
+
+      <div style="
+        color:#d4a373;
+        margin-bottom:15px;
+      ">
+        ★★★★★
+      </div>
 
       <p>
         “The products feel genuinely premium and the website experience looks luxurious.”
@@ -764,6 +137,13 @@ footer{
 
       <i class="fa-solid fa-quote-left"></i>
 
+      <div style="
+        color:#d4a373;
+        margin-bottom:15px;
+      ">
+        ★★★★★
+      </div>
+
       <p>
         “Beautiful presentation, elegant products, and modern luxury design.”
       </p>
@@ -775,6 +155,13 @@ footer{
     <div class="review">
 
       <i class="fa-solid fa-quote-left"></i>
+
+      <div style="
+        color:#d4a373;
+        margin-bottom:15px;
+      ">
+        ★★★★★
+      </div>
 
       <p>
         “One of the most stylish cosmetics brands I have seen online.”
@@ -788,85 +175,100 @@ footer{
 
 </section>
 
-<!-- CONTACT -->
+<!-- FAQ -->
 
-<section id="contact">
+<section id="faq">
 
-  <div class="contact">
+  <div class="title">
 
-    <h2>Contact IQ Cosmetics</h2>
+    <h2>Frequently Asked Questions</h2>
 
     <p>
-      Connect with our beauty team for collaborations and product inquiries.
+      Everything customers usually ask before purchasing beauty products.
     </p>
 
-    <input type="text" id="name" placeholder="Your Name">
+  </div>
 
-    <input type="email" id="email" placeholder="Your Email">
+  <div style="
+    max-width:900px;
+    margin:auto;
+  ">
 
-    <textarea id="message" placeholder="Your Message"></textarea>
+    <details style="
+      background:#f8f8f8;
+      padding:25px;
+      border-radius:18px;
+      margin-bottom:20px;
+      cursor:pointer;
+    ">
 
-    <button onclick="sendMessage()">
-      Send Message
-    </button>
+      <summary style="
+        font-size:18px;
+        font-weight:600;
+      ">
+        Are IQ Cosmetics products cruelty-free?
+      </summary>
+
+      <p style="
+        margin-top:15px;
+        color:#666;
+        line-height:1.8;
+      ">
+        Yes. All IQ Cosmetics products are cruelty-free and designed with premium quality standards.
+      </p>
+
+    </details>
+
+    <details style="
+      background:#f8f8f8;
+      padding:25px;
+      border-radius:18px;
+      margin-bottom:20px;
+      cursor:pointer;
+    ">
+
+      <summary style="
+        font-size:18px;
+        font-weight:600;
+      ">
+        Do you offer international shipping?
+      </summary>
+
+      <p style="
+        margin-top:15px;
+        color:#666;
+        line-height:1.8;
+      ">
+        Yes. IQ Cosmetics ships internationally with secure premium packaging.
+      </p>
+
+    </details>
+
+    <details style="
+      background:#f8f8f8;
+      padding:25px;
+      border-radius:18px;
+      margin-bottom:20px;
+      cursor:pointer;
+    ">
+
+      <summary style="
+        font-size:18px;
+        font-weight:600;
+      ">
+        Are your skincare products suitable for sensitive skin?
+      </summary>
+
+      <p style="
+        margin-top:15px;
+        color:#666;
+        line-height:1.8;
+      ">
+        Our skincare collection is created with skin-friendly ingredients suitable for most skin types.
+      </p>
+
+    </details>
 
   </div>
 
 </section>
-
-<!-- FOOTER -->
-
-<footer>
-
-  <div class="socials">
-
-    <a href="https://instagram.com" target="_blank">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
-
-    <a href="https://facebook.com" target="_blank">
-      <i class="fa-brands fa-facebook"></i>
-    </a>
-
-    <a href="https://twitter.com" target="_blank">
-      <i class="fa-brands fa-x-twitter"></i>
-    </a>
-
-    <a href="https://youtube.com" target="_blank">
-      <i class="fa-brands fa-youtube"></i>
-    </a>
-
-  </div>
-
-  © 2026 IQ Cosmetics. All Rights Reserved.
-
-</footer>
-
-<script>
-
-function sendMessage(){
-
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let message = document.getElementById("message").value;
-
-  if(name === "" || email === "" || message === ""){
-
-    alert("Please fill all fields.");
-
-  }else{
-
-    window.location.href =
-    "mailto:iqcosmetics@email.com?subject=New Message From " +
-    name +
-    "&body=" +
-    message;
-
-  }
-
-}
-
-</script>
-
-</body>
-</html>
