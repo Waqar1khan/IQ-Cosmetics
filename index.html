@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,6 +10,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
 <style>
 
 *{
@@ -16,26 +19,27 @@
   padding:0;
   box-sizing:border-box;
   font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
 }
 
 body{
   background:#fff;
-  overflow-x:hidden;
   color:#222;
+  overflow-x:hidden;
 }
 
 /* HEADER */
 
 header{
-  width:100%;
   position:fixed;
   top:0;
   left:0;
-  z-index:1000;
+  width:100%;
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:22px 90px;
+  z-index:1000;
   background:rgba(0,0,0,0.55);
   backdrop-filter:blur(14px);
 }
@@ -48,22 +52,22 @@ header{
 }
 
 nav a{
-  color:#fff;
   text-decoration:none;
+  color:#fff;
   margin-left:35px;
   font-size:15px;
-  transition:0.3s;
   position:relative;
+  transition:0.3s;
 }
 
 nav a::after{
   content:'';
-  width:0;
-  height:2px;
-  background:#d4a373;
   position:absolute;
   left:0;
   bottom:-6px;
+  width:0;
+  height:2px;
+  background:#d4a373;
   transition:0.3s;
 }
 
@@ -77,7 +81,7 @@ nav a:hover::after{
   height:100vh;
   background:
   linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
-  url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=2000&auto=format&fit=crop');
+  url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=2200&auto=format&fit=crop');
   background-size:cover;
   background-position:center;
   display:flex;
@@ -86,32 +90,32 @@ nav a:hover::after{
 }
 
 .hero-content{
-  max-width:700px;
+  max-width:720px;
   color:#fff;
 }
 
 .hero-content span{
   display:inline-block;
-  padding:10px 22px;
-  border:1px solid rgba(255,255,255,0.3);
+  padding:10px 24px;
   border-radius:40px;
-  margin-bottom:25px;
+  background:rgba(255,255,255,0.1);
   backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.15);
+  margin-bottom:25px;
   font-size:14px;
 }
 
 .hero-content h1{
-  font-size:88px;
+  font-size:92px;
   line-height:1.05;
   margin-bottom:25px;
-  font-weight:700;
 }
 
 .hero-content p{
   font-size:18px;
   line-height:1.9;
   margin-bottom:35px;
-  max-width:620px;
+  max-width:650px;
 }
 
 .hero-buttons{
@@ -119,8 +123,12 @@ nav a:hover::after{
   gap:20px;
 }
 
+.hero-buttons a{
+  text-decoration:none;
+}
+
 .hero-buttons button{
-  padding:16px 38px;
+  padding:16px 40px;
   border:none;
   border-radius:50px;
   cursor:pointer;
@@ -128,20 +136,19 @@ nav a:hover::after{
   transition:0.3s;
 }
 
-.btn-main{
+.main-btn{
   background:#d4a373;
   color:#fff;
 }
 
-.btn-main:hover{
-  transform:translateY(-3px);
+.main-btn:hover{
+  transform:translateY(-4px);
 }
 
-.btn-second{
+.second-btn{
   background:rgba(255,255,255,0.12);
   color:#fff;
   border:1px solid rgba(255,255,255,0.2);
-  backdrop-filter:blur(10px);
 }
 
 /* SECTION */
@@ -157,12 +164,12 @@ section{
 
 .title h2{
   font-size:52px;
-  margin-bottom:15px;
+  margin-bottom:14px;
 }
 
 .title p{
   color:#666;
-  max-width:750px;
+  max-width:760px;
   margin:auto;
   line-height:1.8;
 }
@@ -176,10 +183,10 @@ section{
 }
 
 .card{
-  border-radius:25px;
-  overflow:hidden;
   background:#fff;
-  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+  border-radius:28px;
+  overflow:hidden;
+  box-shadow:0 15px 45px rgba(0,0,0,0.08);
   transition:0.4s;
 }
 
@@ -188,13 +195,13 @@ section{
 }
 
 .card-image{
-  position:relative;
   overflow:hidden;
+  position:relative;
 }
 
 .card-image img{
   width:100%;
-  height:380px;
+  height:390px;
   object-fit:cover;
   transition:0.5s;
 }
@@ -209,8 +216,8 @@ section{
   left:18px;
   background:#111;
   color:#fff;
-  padding:8px 14px;
-  border-radius:30px;
+  padding:8px 15px;
+  border-radius:40px;
   font-size:12px;
 }
 
@@ -229,6 +236,10 @@ section{
   margin-bottom:22px;
 }
 
+.card-content a{
+  text-decoration:none;
+}
+
 .card-content button{
   padding:13px 28px;
   border:none;
@@ -236,17 +247,22 @@ section{
   color:#fff;
   border-radius:40px;
   cursor:pointer;
+  transition:0.3s;
+}
+
+.card-content button:hover{
+  background:#d4a373;
 }
 
 /* BANNER */
 
 .banner{
-  height:550px;
+  height:560px;
   border-radius:35px;
   overflow:hidden;
   background:
-  linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
-  url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=2000&auto=format&fit=crop');
+  linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+  url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=2200&auto=format&fit=crop');
   background-size:cover;
   background-position:center;
   display:flex;
@@ -257,10 +273,14 @@ section{
 }
 
 .banner-content h2{
-  font-size:68px;
-  line-height:1.2;
+  font-size:72px;
   max-width:900px;
-  margin-bottom:25px;
+  line-height:1.2;
+  margin-bottom:30px;
+}
+
+.banner-content a{
+  text-decoration:none;
 }
 
 .banner-content button{
@@ -270,6 +290,7 @@ section{
   background:#fff;
   color:#111;
   cursor:pointer;
+  font-size:15px;
 }
 
 /* GALLERY */
@@ -282,14 +303,13 @@ section{
 
 .gallery a{
   overflow:hidden;
-  border-radius:24px;
+  border-radius:25px;
   display:block;
-  position:relative;
 }
 
 .gallery img{
   width:100%;
-  height:350px;
+  height:360px;
   object-fit:cover;
   transition:0.5s;
 }
@@ -307,9 +327,9 @@ section{
 }
 
 .review{
+  background:#f8f8f8;
   padding:40px;
   border-radius:25px;
-  background:#f8f8f8;
   transition:0.3s;
 }
 
@@ -317,10 +337,16 @@ section{
   transform:translateY(-8px);
 }
 
+.review i{
+  font-size:28px;
+  margin-bottom:20px;
+  color:#d4a373;
+}
+
 .review p{
-  color:#555;
   line-height:1.9;
-  margin-bottom:22px;
+  color:#555;
+  margin-bottom:20px;
 }
 
 .review h4{
@@ -331,14 +357,14 @@ section{
 
 .contact{
   background:#111;
+  color:#fff;
   border-radius:35px;
   padding:80px;
-  color:#fff;
   text-align:center;
 }
 
 .contact h2{
-  font-size:50px;
+  font-size:52px;
   margin-bottom:20px;
 }
 
@@ -379,7 +405,22 @@ footer{
   background:#000;
   color:#888;
   text-align:center;
-  padding:35px;
+  padding:50px 20px;
+}
+
+.socials{
+  margin-bottom:25px;
+}
+
+.socials a{
+  color:#fff;
+  margin:0 12px;
+  font-size:20px;
+  transition:0.3s;
+}
+
+.socials a:hover{
+  color:#d4a373;
 }
 
 /* MOBILE */
@@ -417,6 +458,7 @@ footer{
 }
 
 </style>
+
 </head>
 
 <body>
@@ -428,18 +470,18 @@ footer{
   <div class="logo">IQ</div>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Products</a>
-    <a href="#">Gallery</a>
-    <a href="#">Reviews</a>
-    <a href="#">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
   </nav>
 
 </header>
 
 <!-- HERO -->
 
-<section class="hero">
+<section class="hero" id="home">
 
   <div class="hero-content">
 
@@ -449,18 +491,22 @@ footer{
 
     <p>
       IQ Cosmetics combines luxury skincare, premium beauty products,
-      and modern elegance designed for confident style.
+      and modern elegance designed for confident style and timeless beauty.
     </p>
 
     <div class="hero-buttons">
 
-      <button class="btn-main">
-        Shop Collection
-      </button>
+      <a href="#products">
+        <button class="main-btn">
+          Shop Collection
+        </button>
+      </a>
 
-      <button class="btn-second">
-        Explore Brand
-      </button>
+      <a href="#gallery">
+        <button class="second-btn">
+          Explore Brand
+        </button>
+      </a>
 
     </div>
 
@@ -470,14 +516,14 @@ footer{
 
 <!-- PRODUCTS -->
 
-<section>
+<section id="products">
 
   <div class="title">
 
     <h2>Featured Products</h2>
 
     <p>
-      Premium beauty products inspired by modern luxury fashion and skincare trends.
+      Premium beauty products inspired by luxury fashion and modern skincare.
     </p>
 
   </div>
@@ -490,7 +536,7 @@ footer{
 
         <span class="badge">Best Seller</span>
 
-        <a href="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=2000&auto=format&fit=crop" target="_blank">
+        <a href="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=2200&auto=format&fit=crop" target="_blank">
 
           <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=1200&auto=format&fit=crop">
 
@@ -506,7 +552,11 @@ footer{
           Luxury matte lipstick with rich elegant finish and smooth texture.
         </p>
 
-        <button>View Product</button>
+        <a href="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=2200&auto=format&fit=crop" target="_blank">
+
+          <button>View Product</button>
+
+        </a>
 
       </div>
 
@@ -518,7 +568,7 @@ footer{
 
         <span class="badge">Trending</span>
 
-        <a href="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=2000&auto=format&fit=crop" target="_blank">
+        <a href="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=2200&auto=format&fit=crop" target="_blank">
 
           <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1200&auto=format&fit=crop">
 
@@ -534,7 +584,11 @@ footer{
           Natural radiant coverage with premium smooth skin finish.
         </p>
 
-        <button>View Product</button>
+        <a href="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=2200&auto=format&fit=crop" target="_blank">
+
+          <button>View Product</button>
+
+        </a>
 
       </div>
 
@@ -546,7 +600,7 @@ footer{
 
         <span class="badge">Luxury</span>
 
-        <a href="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?q=80&w=2000&auto=format&fit=crop" target="_blank">
+        <a href="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?q=80&w=2200&auto=format&fit=crop" target="_blank">
 
           <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?q=80&w=1200&auto=format&fit=crop">
 
@@ -562,7 +616,11 @@ footer{
           Elegant fragrance inspired by fashion and timeless beauty.
         </p>
 
-        <button>View Product</button>
+        <a href="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?q=80&w=2200&auto=format&fit=crop" target="_blank">
+
+          <button>View Product</button>
+
+        </a>
 
       </div>
 
@@ -574,7 +632,7 @@ footer{
 
         <span class="badge">New</span>
 
-        <a href="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=2000&auto=format&fit=crop" target="_blank">
+        <a href="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=2200&auto=format&fit=crop" target="_blank">
 
           <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1200&auto=format&fit=crop">
 
@@ -587,10 +645,14 @@ footer{
         <h3>Hydra Skin Serum</h3>
 
         <p>
-          Deep hydration serum for glowing healthy and soft skin.
+          Deep hydration serum for glowing healthy and smooth skin.
         </p>
 
-        <button>View Product</button>
+        <a href="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=2200&auto=format&fit=crop" target="_blank">
+
+          <button>View Product</button>
+
+        </a>
 
       </div>
 
@@ -612,9 +674,13 @@ footer{
         Inspired By Luxury Fashion & Premium Beauty
       </h2>
 
-      <button>
-        Discover More
-      </button>
+      <a href="#contact">
+
+        <button>
+          Discover More
+        </button>
+
+      </a>
 
     </div>
 
@@ -624,41 +690,41 @@ footer{
 
 <!-- GALLERY -->
 
-<section>
+<section id="gallery">
 
   <div class="title">
 
     <h2>Beauty Gallery</h2>
 
     <p>
-      A modern cosmetics experience designed to feel stylish and authentic.
+      A premium cosmetics experience designed to feel stylish and authentic.
     </p>
 
   </div>
 
   <div class="gallery">
 
-    <a href="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=2000&auto=format&fit=crop" target="_blank">
+    <a href="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=2200&auto=format&fit=crop" target="_blank">
       <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop">
     </a>
 
-    <a href="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=2000&auto=format&fit=crop" target="_blank">
+    <a href="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=2200&auto=format&fit=crop" target="_blank">
       <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1200&auto=format&fit=crop">
     </a>
 
-    <a href="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2000&auto=format&fit=crop" target="_blank">
+    <a href="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2200&auto=format&fit=crop" target="_blank">
       <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop">
     </a>
 
-    <a href="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=2000&auto=format&fit=crop" target="_blank">
+    <a href="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=2200&auto=format&fit=crop" target="_blank">
       <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop">
     </a>
 
-    <a href="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=2000&auto=format&fit=crop" target="_blank">
+    <a href="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=2200&auto=format&fit=crop" target="_blank">
       <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=1200&auto=format&fit=crop">
     </a>
 
-    <a href="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=2000&auto=format&fit=crop" target="_blank">
+    <a href="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=2200&auto=format&fit=crop" target="_blank">
       <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop">
     </a>
 
@@ -668,7 +734,7 @@ footer{
 
 <!-- REVIEWS -->
 
-<section>
+<section id="reviews">
 
   <div class="title">
 
@@ -684,6 +750,8 @@ footer{
 
     <div class="review">
 
+      <i class="fa-solid fa-quote-left"></i>
+
       <p>
         “The products feel genuinely premium and the website experience looks luxurious.”
       </p>
@@ -694,8 +762,10 @@ footer{
 
     <div class="review">
 
+      <i class="fa-solid fa-quote-left"></i>
+
       <p>
-        “Beautiful presentation, amazing quality, and elegant skincare collection.”
+        “Beautiful presentation, elegant products, and modern luxury design.”
       </p>
 
       <h4>- Lina A.</h4>
@@ -704,8 +774,10 @@ footer{
 
     <div class="review">
 
+      <i class="fa-solid fa-quote-left"></i>
+
       <p>
-        “One of the most stylish beauty brands I have seen online.”
+        “One of the most stylish cosmetics brands I have seen online.”
       </p>
 
       <h4>- Emma R.</h4>
@@ -718,7 +790,7 @@ footer{
 
 <!-- CONTACT -->
 
-<section>
+<section id="contact">
 
   <div class="contact">
 
@@ -728,11 +800,11 @@ footer{
       Connect with our beauty team for collaborations and product inquiries.
     </p>
 
-    <input type="text" placeholder="Your Name">
+    <input type="text" id="name" placeholder="Your Name">
 
-    <input type="email" placeholder="Your Email">
+    <input type="email" id="email" placeholder="Your Email">
 
-    <textarea placeholder="Your Message"></textarea>
+    <textarea id="message" placeholder="Your Message"></textarea>
 
     <button onclick="sendMessage()">
       Send Message
@@ -745,13 +817,53 @@ footer{
 <!-- FOOTER -->
 
 <footer>
+
+  <div class="socials">
+
+    <a href="https://instagram.com" target="_blank">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://facebook.com" target="_blank">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+
+    <a href="https://twitter.com" target="_blank">
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+
+    <a href="https://youtube.com" target="_blank">
+      <i class="fa-brands fa-youtube"></i>
+    </a>
+
+  </div>
+
   © 2026 IQ Cosmetics. All Rights Reserved.
+
 </footer>
 
 <script>
 
 function sendMessage(){
-  alert("Thank you for contacting IQ Cosmetics!");
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+
+  if(name === "" || email === "" || message === ""){
+
+    alert("Please fill all fields.");
+
+  }else{
+
+    window.location.href =
+    "mailto:iqcosmetics@email.com?subject=New Message From " +
+    name +
+    "&body=" +
+    message;
+
+  }
+
 }
 
 </script>
