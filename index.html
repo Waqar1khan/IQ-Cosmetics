@@ -15,7 +15,6 @@
       padding:0;
       box-sizing:border-box;
       font-family:'Poppins',sans-serif;
-      scroll-behavior:smooth;
     }
 
     body{
@@ -27,29 +26,29 @@
     /* HEADER */
 
     header{
-      width:100%;
-      padding:20px 80px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
       position:fixed;
+      width:100%;
       top:0;
       left:0;
       z-index:1000;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:22px 80px;
       background:rgba(0,0,0,0.75);
       backdrop-filter:blur(10px);
     }
 
     .logo{
-      font-size:38px;
-      font-weight:700;
       color:#fff;
+      font-size:40px;
+      font-weight:700;
       letter-spacing:6px;
     }
 
     nav a{
-      text-decoration:none;
       color:#fff;
+      text-decoration:none;
       margin-left:30px;
       font-size:15px;
       transition:0.3s;
@@ -64,7 +63,7 @@
     .hero{
       height:100vh;
       background:
-      linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+      linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
       url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1800&auto=format&fit=crop');
       background-size:cover;
       background-position:center;
@@ -79,25 +78,25 @@
     }
 
     .hero-content h1{
-      font-size:72px;
+      font-size:75px;
       line-height:1.1;
-      margin-bottom:20px;
+      margin-bottom:25px;
     }
 
     .hero-content p{
       font-size:18px;
       line-height:1.8;
-      margin-bottom:30px;
+      margin-bottom:35px;
     }
 
     .hero-content button{
       padding:16px 40px;
       border:none;
+      border-radius:50px;
       background:#d4a373;
       color:#fff;
       font-size:16px;
       cursor:pointer;
-      border-radius:50px;
       transition:0.3s;
     }
 
@@ -112,18 +111,18 @@
       padding:100px 80px;
     }
 
-    .section-title{
+    .title{
       text-align:center;
       margin-bottom:60px;
     }
 
-    .section-title h2{
-      font-size:44px;
+    .title h2{
+      font-size:45px;
       margin-bottom:15px;
     }
 
-    .section-title p{
-      color:#666;
+    .title p{
+      color:#777;
       max-width:700px;
       margin:auto;
       line-height:1.7;
@@ -131,46 +130,46 @@
 
     /* PRODUCTS */
 
-    .products-grid{
+    .products{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
       gap:35px;
     }
 
-    .product-card{
+    .card{
       background:#fff;
-      border-radius:18px;
+      border-radius:20px;
       overflow:hidden;
       box-shadow:0 10px 30px rgba(0,0,0,0.08);
       transition:0.4s;
     }
 
-    .product-card:hover{
+    .card:hover{
       transform:translateY(-10px);
     }
 
-    .product-card img{
+    .card img{
       width:100%;
       height:360px;
       object-fit:cover;
     }
 
-    .product-info{
+    .card-content{
       padding:25px;
     }
 
-    .product-info h3{
-      margin-bottom:12px;
+    .card-content h3{
       font-size:24px;
+      margin-bottom:10px;
     }
 
-    .product-info p{
+    .card-content p{
       color:#666;
       line-height:1.7;
       margin-bottom:20px;
     }
 
-    .product-info button{
+    .card-content button{
       padding:12px 26px;
       border:none;
       background:#111;
@@ -184,9 +183,10 @@
     .banner{
       height:500px;
       border-radius:25px;
+      overflow:hidden;
       background:
-      linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
-      url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1600&auto=format&fit=crop');
+      linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+      url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1800&auto=format&fit=crop');
       background-size:cover;
       background-position:center;
       display:flex;
@@ -198,7 +198,7 @@
 
     .banner h2{
       font-size:60px;
-      max-width:800px;
+      max-width:850px;
       line-height:1.2;
     }
 
@@ -210,30 +210,35 @@
       gap:20px;
     }
 
+    .gallery a{
+      overflow:hidden;
+      border-radius:18px;
+      display:block;
+    }
+
     .gallery img{
       width:100%;
       height:350px;
       object-fit:cover;
-      border-radius:18px;
       transition:0.4s;
     }
 
     .gallery img:hover{
-      transform:scale(1.03);
+      transform:scale(1.08);
     }
 
     /* REVIEWS */
 
-    .reviews-grid{
+    .reviews{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
       gap:30px;
     }
 
     .review{
+      background:#f8f8f8;
       padding:35px;
       border-radius:20px;
-      background:#f8f8f8;
     }
 
     .review p{
@@ -248,48 +253,55 @@
 
     /* CONTACT */
 
-    .contact{
+    .contact-box{
       background:#111;
       color:#fff;
+      padding:70px;
       border-radius:25px;
-    }
-
-    .contact-container{
-      max-width:700px;
-      margin:auto;
       text-align:center;
     }
 
-    .contact input,
-    .contact textarea{
+    .contact-box h2{
+      font-size:42px;
+      margin-bottom:20px;
+    }
+
+    .contact-box p{
+      color:#ccc;
+      margin-bottom:35px;
+    }
+
+    .contact-box input,
+    .contact-box textarea{
       width:100%;
       padding:18px;
-      margin-top:18px;
+      margin-top:15px;
       border:none;
       border-radius:12px;
       font-size:15px;
     }
 
-    .contact textarea{
+    .contact-box textarea{
       height:150px;
       resize:none;
     }
 
-    .contact button{
+    .contact-box button{
       margin-top:20px;
       padding:16px 40px;
       border:none;
+      border-radius:40px;
       background:#d4a373;
       color:#fff;
-      border-radius:40px;
-      cursor:pointer;
       font-size:16px;
+      cursor:pointer;
     }
 
     footer{
-      padding:30px;
+      background:#000;
+      color:#888;
       text-align:center;
-      color:#666;
+      padding:30px;
     }
 
     /* MOBILE */
@@ -320,112 +332,136 @@
         font-size:38px;
       }
 
+      .contact-box{
+        padding:40px 25px;
+      }
+
     }
 
   </style>
 </head>
+
 <body>
 
   <!-- HEADER -->
 
   <header>
+
     <div class="logo">IQ</div>
 
     <nav>
-      <a href="#home">Home</a>
-      <a href="#products">Products</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Gallery</a>
+      <a href="#">Reviews</a>
+      <a href="#">Contact</a>
     </nav>
+
   </header>
 
   <!-- HERO -->
 
-  <section class="hero" id="home">
+  <section class="hero">
 
     <div class="hero-content">
-      <h1>Luxury Beauty Made Modern</h1>
+
+      <h1>Luxury Beauty For Modern Style</h1>
 
       <p>
-        IQ Cosmetics combines elegance, skincare innovation,
-        and premium beauty products designed for confidence,
-        glow, and modern style.
+        Premium cosmetics and skincare products inspired by elegance,
+        confidence, and timeless beauty.
       </p>
 
-      <button>Explore Collection</button>
+      <button>Shop Collection</button>
+
     </div>
 
   </section>
 
   <!-- PRODUCTS -->
 
-  <section id="products">
+  <section>
 
-    <div class="section-title">
+    <div class="title">
       <h2>Featured Products</h2>
 
       <p>
-        Discover luxury makeup and skincare products trusted by beauty lovers worldwide.
+        Explore luxury makeup and skincare products designed with premium quality.
       </p>
     </div>
 
-    <div class="products-grid">
+    <div class="products">
 
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=1200&auto=format&fit=crop">
+      <div class="card">
 
-        <div class="product-info">
+        <a href="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=1800&auto=format&fit=crop" target="_blank">
+          <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=1200&auto=format&fit=crop">
+        </a>
+
+        <div class="card-content">
           <h3>Velvet Lipstick</h3>
 
           <p>
-            Long-lasting matte lipstick with rich texture and smooth finish.
+            Smooth matte finish with rich long-lasting color.
           </p>
 
           <button>View Product</button>
         </div>
+
       </div>
 
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1200&auto=format&fit=crop">
+      <div class="card">
 
-        <div class="product-info">
+        <a href="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1800&auto=format&fit=crop" target="_blank">
+          <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1200&auto=format&fit=crop">
+        </a>
+
+        <div class="card-content">
           <h3>Glow Foundation</h3>
 
           <p>
-            Lightweight foundation with natural coverage and radiant glow.
+            Lightweight natural coverage with radiant skin finish.
           </p>
 
           <button>View Product</button>
         </div>
+
       </div>
 
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?q=80&w=1200&auto=format&fit=crop">
+      <div class="card">
 
-        <div class="product-info">
+        <a href="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?q=80&w=1800&auto=format&fit=crop" target="_blank">
+          <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?q=80&w=1200&auto=format&fit=crop">
+        </a>
+
+        <div class="card-content">
           <h3>Luxury Perfume</h3>
 
           <p>
-            Elegant fragrance crafted for timeless sophistication and confidence.
+            Elegant fragrance collection inspired by modern fashion.
           </p>
 
           <button>View Product</button>
         </div>
+
       </div>
 
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1200&auto=format&fit=crop">
+      <div class="card">
 
-        <div class="product-info">
+        <a href="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1800&auto=format&fit=crop" target="_blank">
+          <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1200&auto=format&fit=crop">
+        </a>
+
+        <div class="card-content">
           <h3>Hydra Skin Serum</h3>
 
           <p>
-            Deep hydration serum for glowing healthy skin and smooth texture.
+            Deep hydration serum for glowing and healthy skin.
           </p>
 
           <button>View Product</button>
         </div>
+
       </div>
 
     </div>
@@ -437,38 +473,54 @@
   <section>
 
     <div class="banner">
+
       <h2>
-        Beauty That Feels Premium, Elegant, and Timeless
+        Beauty That Looks Premium, Elegant, and Real
       </h2>
+
     </div>
 
   </section>
 
   <!-- GALLERY -->
 
-  <section id="gallery">
+  <section>
 
-    <div class="section-title">
+    <div class="title">
+
       <h2>Beauty Gallery</h2>
 
       <p>
-        Inspired by fashion, luxury skincare, and modern cosmetic trends.
+        Inspired by luxury fashion, skincare, and beauty trends.
       </p>
+
     </div>
 
     <div class="gallery">
 
-      <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop">
+      <a href="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1800&auto=format&fit=crop" target="_blank">
+        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop">
+      </a>
 
-      <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1200&auto=format&fit=crop">
+      <a href="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1800&auto=format&fit=crop" target="_blank">
+        <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1200&auto=format&fit=crop">
+      </a>
 
-      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop">
+      <a href="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1800&auto=format&fit=crop" target="_blank">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop">
+      </a>
 
-      <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop">
+      <a href="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1800&auto=format&fit=crop" target="_blank">
+        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop">
+      </a>
 
-      <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=1200&auto=format&fit=crop">
+      <a href="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=1800&auto=format&fit=crop" target="_blank">
+        <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=1200&auto=format&fit=crop">
+      </a>
 
-      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop">
+      <a href="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1800&auto=format&fit=crop" target="_blank">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop">
+      </a>
 
     </div>
 
@@ -476,22 +528,23 @@
 
   <!-- REVIEWS -->
 
-  <section id="reviews">
+  <section>
 
-    <div class="section-title">
+    <div class="title">
+
       <h2>Customer Reviews</h2>
 
       <p>
-        Real experiences from beauty customers who love IQ Cosmetics.
+        Trusted by beauty customers worldwide.
       </p>
+
     </div>
 
-    <div class="reviews-grid">
+    <div class="reviews">
 
       <div class="review">
         <p>
-          “The foundation blends perfectly and gives a luxury finish.
-          Definitely one of the best beauty brands I tried.”
+          “The foundation gives a luxury finish and feels incredibly smooth.”
         </p>
 
         <h4>- Sarah M.</h4>
@@ -499,7 +552,7 @@
 
       <div class="review">
         <p>
-          “Beautiful packaging, premium quality, and the lipstick lasts for hours.”
+          “Beautiful products, elegant packaging, and premium quality.”
         </p>
 
         <h4>- Lina A.</h4>
@@ -507,8 +560,7 @@
 
       <div class="review">
         <p>
-          “The skincare collection completely changed my routine.
-          My skin looks healthier and brighter.”
+          “The skincare products completely upgraded my beauty routine.”
         </p>
 
         <h4>- Emma R.</h4>
@@ -520,23 +572,25 @@
 
   <!-- CONTACT -->
 
-  <section id="contact">
+  <section>
 
-    <div class="contact">
+    <div class="contact-box">
 
-      <div class="contact-container">
+      <h2>Contact IQ Cosmetics</h2>
 
-        <h2>Contact IQ Cosmetics</h2>
+      <p>
+        Connect with our beauty team for collaborations and product information.
+      </p>
 
-        <input type="text" placeholder="Your Name">
+      <input type="text" placeholder="Your Name">
 
-        <input type="email" placeholder="Your Email">
+      <input type="email" placeholder="Your Email">
 
-        <textarea placeholder="Your Message"></textarea>
+      <textarea placeholder="Your Message"></textarea>
 
-        <button onclick="sendMessage()">Send Message</button>
-
-      </div>
+      <button onclick="showMessage()">
+        Send Message
+      </button>
 
     </div>
 
@@ -550,7 +604,7 @@
 
   <script>
 
-    function sendMessage(){
+    function showMessage(){
       alert("Thank you for contacting IQ Cosmetics!");
     }
 
