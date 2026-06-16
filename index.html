@@ -1,627 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>RESHINE Cosmetics</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IQ Cosmetics</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
-<style>
+    body{
+      font-family:Arial, sans-serif;
+      background:#fff7fb;
+      color:#222;
+    }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+    header{
+      background:linear-gradient(to right,#ffb6d9,#ffd6ea);
+      padding:30px 20px;
+      text-align:center;
+    }
 
-body{
-background:#fff7fa;
-color:#222;
-overflow-x:hidden;
-}
+    header h1{
+      font-size:40px;
+      color:#c2185b;
+      margin-bottom:10px;
+    }
 
-/* NAVBAR */
+    header p{
+      font-size:18px;
+      color:#444;
+    }
 
-nav{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(255,255,255,0.92);
-backdrop-filter:blur(10px);
-z-index:1000;
-box-shadow:0 4px 15px rgba(0,0,0,0.08);
-}
+    .hero{
+      width:100%;
+    }
 
-.logo{
-font-size:32px;
-font-weight:700;
-color:#d94b8a;
-letter-spacing:2px;
-}
+    .hero img{
+      width:100%;
+      display:block;
+    }
 
-.logo span{
-color:#ff9f43;
-}
+    .products{
+      padding:30px 15px;
+    }
 
-nav ul{
-display:flex;
-list-style:none;
-gap:30px;
-}
+    .products h2{
+      text-align:center;
+      margin-bottom:25px;
+      color:#c2185b;
+      font-size:32px;
+    }
 
-nav ul li a{
-text-decoration:none;
-color:#222;
-font-weight:500;
-transition:0.3s;
-}
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
 
-nav ul li a:hover{
-color:#d94b8a;
-}
+    .card{
+      background:white;
+      border-radius:15px;
+      overflow:hidden;
+      box-shadow:0 4px 12px rgba(0,0,0,0.15);
+      transition:0.3s;
+    }
 
-/* HERO */
+    .card:hover{
+      transform:translateY(-5px);
+    }
 
-.hero{
-height:100vh;
-background:
-linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3)),
-url('120885.jpg');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-padding:0 8%;
-margin-top:70px;
-}
+    .card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
 
-.hero-content{
-max-width:600px;
-}
-
-.hero h1{
-font-size:70px;
-line-height:1.1;
-color:#d94b8a;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:20px;
-margin-bottom:30px;
-color:#444;
-}
-
-.hero button{
-padding:15px 35px;
-border:none;
-background:#d94b8a;
-color:white;
-font-size:18px;
-border-radius:50px;
-cursor:pointer;
-transition:0.3s;
-}
-
-.hero button:hover{
-background:#ff9f43;
-transform:scale(1.05);
-}
-
-/* BANNER */
-
-.banner{
-padding:80px 8%;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-}
-
-.banner img{
-width:100%;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
-transition:0.4s;
-cursor:pointer;
-}
-
-.banner img:hover{
-transform:translateY(-10px);
-}
-
-/* PRODUCTS */
-
-.products{
-padding:80px 8%;
-background:white;
-}
-
-.section-title{
-text-align:center;
-font-size:50px;
-margin-bottom:60px;
-color:#d94b8a;
-}
-
-.product-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:35px;
-}
-
-.product-card{
-background:white;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
-transition:0.4s;
-}
-
-.product-card:hover{
-transform:translateY(-10px);
-}
-
-.product-card img{
-width:100%;
-height:320px;
-object-fit:cover;
-}
-
-.product-info{
-padding:20px;
-}
-
-.product-info h3{
-font-size:24px;
-margin-bottom:10px;
-}
-
-.rating{
-color:#ffb400;
-font-size:18px;
-margin-bottom:10px;
-}
-
-.product-info p{
-font-size:14px;
-color:#666;
-margin-bottom:18px;
-line-height:1.6;
-}
-
-.buttons{
-display:flex;
-gap:10px;
-}
-
-.buttons a{
-flex:1;
-text-align:center;
-padding:12px;
-border-radius:40px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-}
-
-.buy{
-background:#d94b8a;
-color:white;
-}
-
-.buy:hover{
-background:#ff9f43;
-}
-
-.details{
-border:2px solid #d94b8a;
-color:#d94b8a;
-}
-
-.details:hover{
-background:#d94b8a;
-color:white;
-}
-
-/* REVIEWS */
-
-.reviews{
-padding:80px 8%;
-background:#fff1f6;
-}
-
-.review-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-.review{
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-.review h4{
-margin-bottom:10px;
-}
-
-.review p{
-font-size:14px;
-color:#666;
-line-height:1.7;
-}
-
-/* FAQ */
-
-.faq{
-padding:80px 8%;
-}
-
-.faq-box{
-background:white;
-margin-bottom:20px;
-padding:25px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-}
-
-.faq-box h3{
-margin-bottom:10px;
-color:#d94b8a;
-}
-
-/* FOOTER */
-
-footer{
-background:#111;
-color:white;
-padding:50px 8%;
-text-align:center;
-}
-
-footer h2{
-margin-bottom:20px;
-font-size:40px;
-color:#ff9f43;
-}
-
-footer p{
-color:#ccc;
-line-height:1.8;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:45px;
-}
-
-nav ul{
-display:none;
-}
-
-}
-
-</style>
+    footer{
+      text-align:center;
+      padding:25px;
+      background:#ffd6ea;
+      margin-top:40px;
+      color:#444;
+      font-weight:bold;
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
-<div class="logo">RE<span>SHINE</span></div>
+  <header>
+    <h1>IQ Cosmetics</h1>
+    <p>Luxury Beauty & Skincare Collection</p>
+  </header>
 
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#products">Products</a></li>
-<li><a href="#reviews">Reviews</a></li>
-<li><a href="#faq">FAQ</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
+  <section class="hero">
+    <img src="Photo1.jpg" alt="IQ Cosmetics">
+  </section>
 
-<section class="hero">
+  <section class="products">
+    <h2>Our Products</h2>
 
-<div class="hero-content">
-<h1>Glow Naturally With RESHINE</h1>
+    <div class="gallery">
 
-<p>
-Advanced skincare products made for radiant, fresh and glowing skin.
-Trusted by thousands of skincare lovers.
-</p>
+      <div class="card">
+        <img src="Photo1.jpg" alt="">
+      </div>
 
-<button onclick="window.location='#products'">
-Explore Products
-</button>
+      <div class="card">
+        <img src="Photo2.jpg" alt="">
+      </div>
 
-</div>
-</section>
+      <div class="card">
+        <img src="Photo3.jpg" alt="">
+      </div>
 
-<section class="banner">
+      <div class="card">
+        <img src="Photo4.jpg" alt="">
+      </div>
 
-<a href="120880.jpg" target="_blank">
-<img src="120880.jpg">
-</a>
+      <div class="card">
+        <img src="Photo5.jpg" alt="">
+      </div>
 
-<a href="120881.jpg" target="_blank">
-<img src="120881.jpg">
-</a>
+      <div class="card">
+        <img src="Photo6.jpg" alt="">
+      </div>
 
-<a href="120882.jpg" target="_blank">
-<img src="120882.jpg">
-</a>
+      <div class="card">
+        <img src="Photo7.jpg" alt="">
+      </div>
 
-<a href="120883.jpg" target="_blank">
-<img src="120883.jpg">
-</a>
+      <div class="card">
+        <img src="Photo8.jpg" alt="">
+      </div>
 
-</section>
+    </div>
+  </section>
 
-<section class="products" id="products">
-
-<h2 class="section-title">Our Best Products</h2>
-
-<div class="product-grid">
-
-<div class="product-card">
-<img src="120884.jpg">
-
-<div class="product-info">
-
-<h3>Vitamin C Face Wash</h3>
-
-<div class="rating">
-★★★★★ 4.9
-</div>
-
-<p>
-Brightens skin instantly and helps remove dullness, acne marks and impurities.
-</p>
-
-<div class="buttons">
-
-<a class="buy" href="https://www.daraz.pk/" target="_blank">
-Buy Now
-</a>
-
-<a class="details" href="120884.jpg" target="_blank">
-View
-</a>
-
-</div>
-</div>
-</div>
-
-<div class="product-card">
-<img src="120885.jpg">
-
-<div class="product-info">
-
-<h3>White Expert Cream</h3>
-
-<div class="rating">
-★★★★★ 4.8
-</div>
-
-<p>
-Luxury brightening cream enriched with natural ingredients for glowing skin.
-</p>
-
-<div class="buttons">
-
-<a class="buy" href="https://www.amazon.com/" target="_blank">
-Buy Now
-</a>
-
-<a class="details" href="120885.jpg" target="_blank">
-View
-</a>
-
-</div>
-</div>
-</div>
-
-<div class="product-card">
-<img src="120886.jpg">
-
-<div class="product-info">
-
-<h3>Niacinamide Face Wash</h3>
-
-<div class="rating">
-★★★★★ 4.9
-</div>
-
-<p>
-Deep cleansing formula designed for smooth and radiant skin every day.
-</p>
-
-<div class="buttons">
-
-<a class="buy" href="https://www.ebay.com/" target="_blank">
-Buy Now
-</a>
-
-<a class="details" href="120886.jpg" target="_blank">
-View
-</a>
-
-</div>
-</div>
-</div>
-
-<div class="product-card">
-<img src="120887.jpg">
-
-<div class="product-info">
-
-<h3>Charcoal Face Wash</h3>
-
-<div class="rating">
-★★★★★ 4.7
-</div>
-
-<p>
-Powerful charcoal cleansing for removing oil, dirt and pollution from skin.
-</p>
-
-<div class="buttons">
-
-<a class="buy" href="https://www.alibaba.com/" target="_blank">
-Buy Now
-</a>
-
-<a class="details" href="120887.jpg" target="_blank">
-View
-</a>
-
-</div>
-</div>
-</div>
-
-<div class="product-card">
-<img src="120888.jpg">
-
-<div class="product-info">
-
-<h3>6 in 1 Active Cleansing</h3>
-
-<div class="rating">
-★★★★★ 4.8
-</div>
-
-<p>
-Complete skincare cleansing formula for glowing and refreshed skin.
-</p>
-
-<div class="buttons">
-
-<a class="buy" href="https://www.shopify.com/" target="_blank">
-Buy Now
-</a>
-
-<a class="details" href="120888.jpg" target="_blank">
-View
-</a>
-
-</div>
-</div>
-</div>
-
-<div class="product-card">
-<img src="120889.jpg">
-
-<div class="product-info">
-
-<h3>Instant Glow Serum</h3>
-
-<div class="rating">
-★★★★★ 5.0
-</div>
-
-<p>
-Premium serum designed to hydrate skin and provide instant visible glow.
-</p>
-
-<div class="buttons">
-
-<a class="buy" href="https://www.walmart.com/" target="_blank">
-Buy Now
-</a>
-
-<a class="details" href="120889.jpg" target="_blank">
-View
-</a>
-
-</div>
-</div>
-</div>
-
-</div>
-</section>
-
-<section class="reviews" id="reviews">
-
-<h2 class="section-title">Customer Reviews</h2>
-
-<div class="review-grid">
-
-<div class="review">
-<h4>Sarah Khan ★★★★★</h4>
-<p>
-I tried the Vitamin C face wash and my skin started looking brighter within days. Packaging and quality feel premium.
-</p>
-</div>
-
-<div class="review">
-<h4>Areeba Noor ★★★★★</h4>
-<p>
-The White Expert Cream gives a smooth glow and feels luxurious. Definitely worth trying.
-</p>
-</div>
-
-<div class="review">
-<h4>Hina Ali ★★★★★</h4>
-<p>
-The serum is honestly one of the best products I used this year. Skin feels hydrated and fresh.
-</p>
-</div>
-
-</div>
-</section>
-
-<section class="faq" id="faq">
-
-<h2 class="section-title">Frequently Asked Questions</h2>
-
-<div class="faq-box">
-<h3>Are RESHINE products suitable for all skin types?</h3>
-<p>
-Yes, our products are designed for normal, oily and dry skin types.
-</p>
-</div>
-
-<div class="faq-box">
-<h3>How long does delivery take?</h3>
-<p>
-Delivery usually takes 3 to 5 business days depending on location.
-</p>
-</div>
-
-<div class="faq-box">
-<h3>Can I use Vitamin C products daily?</h3>
-<p>
-Yes. Daily use helps maintain glowing and refreshed skin.
-</p>
-</div>
-
-</section>
-
-<footer id="contact">
-
-<h2>RESHINE Cosmetics</h2>
-
-<p>
-Premium skincare collection for radiant beauty and glowing confidence.
-<br><br>
-Email: support@reshinebeauty.com
-<br>
-Instagram: @reshinebeauty
-<br><br>
-© 2025 RESHINE Cosmetics. All Rights Reserved.
-</p>
-
-</footer>
+  <footer>
+    © 2025 IQ Cosmetics. All Rights Reserved.
+  </footer>
 
 </body>
 </html>
