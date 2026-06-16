@@ -1,17 +1,11 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>RESHINE Cosmetics</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>IQ Cosmetics | Luxury Beauty</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <style>
 
@@ -20,59 +14,57 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
 }
 
 body{
-background:#faf7f4;
+background:#fff7fa;
 color:#222;
 overflow-x:hidden;
 }
 
-/* HEADER */
+/* NAVBAR */
 
-header{
+nav{
 position:fixed;
 top:0;
 left:0;
 width:100%;
+padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:22px 90px;
-background:rgba(0,0,0,0.5);
-backdrop-filter:blur(15px);
+background:rgba(255,255,255,0.92);
+backdrop-filter:blur(10px);
 z-index:1000;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
 }
 
 .logo{
-font-size:42px;
+font-size:32px;
 font-weight:700;
-letter-spacing:8px;
-color:#fff;
+color:#d94b8a;
+letter-spacing:2px;
 }
 
-nav a{
+.logo span{
+color:#ff9f43;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
 text-decoration:none;
-color:#fff;
-margin-left:35px;
-font-size:15px;
-position:relative;
+color:#222;
+font-weight:500;
+transition:0.3s;
 }
 
-nav a::after{
-content:'';
-position:absolute;
-left:0;
-bottom:-7px;
-width:0;
-height:2px;
-background:#d4a373;
-transition:0.4s;
-}
-
-nav a:hover::after{
-width:100%;
+nav ul li a:hover{
+color:#d94b8a;
 }
 
 /* HERO */
@@ -80,133 +72,96 @@ width:100%;
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
-url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=2200&auto=format&fit=crop');
+linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3)),
+url('120885.jpg');
 background-size:cover;
 background-position:center;
 display:flex;
 align-items:center;
-padding:0 90px;
+padding:0 8%;
+margin-top:70px;
 }
 
 .hero-content{
-max-width:700px;
-color:#fff;
+max-width:600px;
 }
 
-.hero-content span{
-display:inline-block;
-padding:10px 24px;
-border-radius:40px;
-background:rgba(255,255,255,0.12);
-border:1px solid rgba(255,255,255,0.2);
-margin-bottom:25px;
+.hero h1{
+font-size:70px;
+line-height:1.1;
+color:#d94b8a;
+margin-bottom:20px;
 }
 
-.hero-content h1{
-font-size:90px;
-line-height:1;
-margin-bottom:25px;
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+color:#444;
 }
 
-.hero-content p{
+.hero button{
+padding:15px 35px;
+border:none;
+background:#d94b8a;
+color:white;
 font-size:18px;
-line-height:1.9;
-margin-bottom:35px;
-}
-
-.hero-buttons{
-display:flex;
-gap:20px;
-}
-
-.hero-buttons button{
-padding:16px 38px;
-border:none;
 border-radius:50px;
-font-size:15px;
 cursor:pointer;
+transition:0.3s;
+}
+
+.hero button:hover{
+background:#ff9f43;
+transform:scale(1.05);
+}
+
+/* BANNER */
+
+.banner{
+padding:80px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.banner img{
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
 transition:0.4s;
-}
-
-.main-btn{
-background:#d4a373;
-color:#fff;
-}
-
-.second-btn{
-background:rgba(255,255,255,0.1);
-color:#fff;
-border:1px solid rgba(255,255,255,0.2);
-}
-
-.hero-buttons button:hover{
-transform:translateY(-4px);
-}
-
-/* SECTION */
-
-section{
-padding:110px 90px;
-}
-
-.title{
-text-align:center;
-margin-bottom:70px;
-}
-
-.title h2{
-font-size:56px;
-margin-bottom:14px;
-}
-
-.title p{
-max-width:760px;
-margin:auto;
-color:#666;
-line-height:1.9;
-}
-
-/* FILTER */
-
-.filter-buttons{
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-margin-bottom:50px;
-}
-
-.filter-buttons button{
-padding:14px 28px;
-border:none;
-border-radius:40px;
-background:#fff;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
 cursor:pointer;
-transition:0.4s;
 }
 
-.filter-buttons button:hover{
-background:#d4a373;
-color:#fff;
+.banner img:hover{
+transform:translateY(-10px);
 }
 
 /* PRODUCTS */
 
 .products{
+padding:80px 8%;
+background:white;
+}
+
+.section-title{
+text-align:center;
+font-size:50px;
+margin-bottom:60px;
+color:#d94b8a;
+}
+
+.product-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:35px;
 }
 
 .product-card{
-background:#fff;
-border-radius:28px;
+background:white;
+border-radius:20px;
 overflow:hidden;
-box-shadow:0 18px 45px rgba(0,0,0,0.08);
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
 transition:0.4s;
-position:relative;
 }
 
 .product-card:hover{
@@ -215,719 +170,458 @@ transform:translateY(-10px);
 
 .product-card img{
 width:100%;
-height:390px;
+height:320px;
 object-fit:cover;
-transition:0.5s;
-}
-
-.product-card:hover img{
-transform:scale(1.08);
-}
-
-.badge{
-position:absolute;
-top:18px;
-left:18px;
-background:#111;
-color:#fff;
-padding:8px 16px;
-border-radius:30px;
-font-size:12px;
 }
 
 .product-info{
-padding:28px;
-}
-
-.product-rating{
-color:#d4a373;
-margin-bottom:12px;
+padding:20px;
 }
 
 .product-info h3{
-font-size:26px;
+font-size:24px;
+margin-bottom:10px;
+}
+
+.rating{
+color:#ffb400;
+font-size:18px;
 margin-bottom:10px;
 }
 
 .product-info p{
-color:#666;
-line-height:1.8;
-margin-bottom:18px;
-}
-
-.product-price{
-font-size:24px;
-font-weight:600;
-margin-bottom:20px;
-}
-
-.product-buttons{
-display:flex;
-gap:12px;
-}
-
-.product-buttons button{
-flex:1;
-padding:14px;
-border:none;
-border-radius:40px;
-cursor:pointer;
 font-size:14px;
-transition:0.4s;
+color:#666;
+margin-bottom:18px;
+line-height:1.6;
 }
 
-.buy-btn{
-background:#111;
-color:#fff;
+.buttons{
+display:flex;
+gap:10px;
 }
 
-.buy-btn:hover{
-background:#d4a373;
+.buttons a{
+flex:1;
+text-align:center;
+padding:12px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
 }
 
-.cart-btn{
-background:#f4f4f4;
+.buy{
+background:#d94b8a;
+color:white;
 }
 
-/* GALLERY */
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:22px;
+.buy:hover{
+background:#ff9f43;
 }
 
-.gallery a{
-overflow:hidden;
-border-radius:24px;
-display:block;
+.details{
+border:2px solid #d94b8a;
+color:#d94b8a;
 }
 
-.gallery img{
-width:100%;
-height:360px;
-object-fit:cover;
-transition:0.5s;
-}
-
-.gallery a:hover img{
-transform:scale(1.1);
+.details:hover{
+background:#d94b8a;
+color:white;
 }
 
 /* REVIEWS */
 
 .reviews{
+padding:80px 8%;
+background:#fff1f6;
+}
+
+.review-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
 }
 
 .review{
-background:#fff;
-padding:40px;
-border-radius:25px;
-box-shadow:0 10px 30px rgba(0,0,0,0.06);
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
-.review img{
-width:65px;
-height:65px;
-border-radius:50%;
-object-fit:cover;
-margin-bottom:20px;
-}
-
-.review-stars{
-color:#d4a373;
-margin-bottom:14px;
+.review h4{
+margin-bottom:10px;
 }
 
 .review p{
-color:#555;
-line-height:1.9;
-margin-bottom:20px;
+font-size:14px;
+color:#666;
+line-height:1.7;
 }
 
 /* FAQ */
 
-details{
-background:#fff;
+.faq{
+padding:80px 8%;
+}
+
+.faq-box{
+background:white;
+margin-bottom:20px;
 padding:25px;
-border-radius:20px;
-margin-bottom:20px;
-box-shadow:0 8px 20px rgba(0,0,0,0.05);
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
-summary{
-font-size:18px;
-font-weight:600;
-cursor:pointer;
-}
-
-details p{
-margin-top:15px;
-color:#666;
-line-height:1.8;
-}
-
-/* CONTACT */
-
-.contact{
-background:#111;
-color:#fff;
-border-radius:35px;
-padding:80px;
-text-align:center;
-}
-
-.contact h2{
-font-size:54px;
-margin-bottom:20px;
-}
-
-.contact p{
-color:#bbb;
-margin-bottom:35px;
-}
-
-.contact input,
-.contact textarea{
-width:100%;
-padding:18px;
-margin-top:16px;
-border:none;
-border-radius:14px;
-font-size:15px;
-}
-
-.contact textarea{
-height:160px;
-resize:none;
-}
-
-.contact button{
-margin-top:24px;
-padding:16px 42px;
-border:none;
-border-radius:50px;
-background:#d4a373;
-color:#fff;
-cursor:pointer;
-font-size:16px;
+.faq-box h3{
+margin-bottom:10px;
+color:#d94b8a;
 }
 
 /* FOOTER */
 
 footer{
-background:#000;
-color:#888;
-text-align:center;
-padding:50px 20px;
-}
-
-.socials{
-margin-bottom:25px;
-}
-
-.socials a{
-color:#fff;
-margin:0 12px;
-font-size:22px;
-}
-
-/* CART */
-
-#cart-icon{
-position:fixed;
-bottom:30px;
-right:30px;
 background:#111;
-color:#fff;
-width:65px;
-height:65px;
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:24px;
-cursor:pointer;
-z-index:9999;
-box-shadow:0 10px 30px rgba(0,0,0,0.25);
+color:white;
+padding:50px 8%;
+text-align:center;
+}
+
+footer h2{
+margin-bottom:20px;
+font-size:40px;
+color:#ff9f43;
+}
+
+footer p{
+color:#ccc;
+line-height:1.8;
 }
 
 /* MOBILE */
 
-@media(max-width:900px){
+@media(max-width:768px){
 
-header{
-padding:20px 30px;
+.hero h1{
+font-size:45px;
 }
 
-nav{
+nav ul{
 display:none;
-}
-
-.hero{
-padding:0 30px;
-}
-
-.hero-content h1{
-font-size:58px;
-}
-
-section{
-padding:90px 30px;
-}
-
-.contact{
-padding:50px 25px;
 }
 
 }
 
 </style>
-
 </head>
 
 <body>
 
-<header>
-
-<div class="logo">IQ</div>
-
 <nav>
-<a href="#home">Home</a>
-<a href="#products">Products</a>
-<a href="#gallery">Gallery</a>
-<a href="#reviews">Reviews</a>
-<a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
+<div class="logo">RE<span>SHINE</span></div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 
-</header>
-
-<div id="cart-icon" onclick="buyNow()">
-<i class="fa-solid fa-bag-shopping"></i>
-</div>
-
-<section class="hero" id="home">
+<section class="hero">
 
 <div class="hero-content">
-
-<span>Luxury Beauty Collection</span>
-
-<h1>Beauty That Looks Premium & Real</h1>
+<h1>Glow Naturally With RESHINE</h1>
 
 <p>
-Premium skincare and beauty products inspired by luxury cosmetic brands.
+Advanced skincare products made for radiant, fresh and glowing skin.
+Trusted by thousands of skincare lovers.
 </p>
 
-<div class="hero-buttons">
-
-<a href="#products">
-<button class="main-btn">Shop Collection</button>
-</a>
-
-<a href="#gallery">
-<button class="second-btn">Explore Brand</button>
-</a>
+<button onclick="window.location='#products'">
+Explore Products
+</button>
 
 </div>
+</section>
 
-</div>
+<section class="banner">
+
+<a href="120880.jpg" target="_blank">
+<img src="120880.jpg">
+</a>
+
+<a href="120881.jpg" target="_blank">
+<img src="120881.jpg">
+</a>
+
+<a href="120882.jpg" target="_blank">
+<img src="120882.jpg">
+</a>
+
+<a href="120883.jpg" target="_blank">
+<img src="120883.jpg">
+</a>
 
 </section>
 
-<section id="products">
+<section class="products" id="products">
 
-<div class="title">
+<h2 class="section-title">Our Best Products</h2>
 
-<h2>500+ Luxury Beauty Products</h2>
-
-<p>
-Explore premium makeup, skincare, perfumes, glow essentials,
-and luxury cosmetics collections.
-</p>
-
-</div>
-
-<div class="filter-buttons">
-
-<button>All Products</button>
-<button>Skincare</button>
-<button>Makeup</button>
-<button>Perfume</button>
-<button>Luxury Sets</button>
-
-</div>
-
-<div class="products">
+<div class="product-grid">
 
 <div class="product-card">
-
-<div class="badge">Best Seller</div>
-
-<img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=1200&auto=format&fit=crop">
+<img src="120884.jpg">
 
 <div class="product-info">
 
-<div class="product-rating">
-★★★★★ (4,892 Reviews)
-</div>
+<h3>Vitamin C Face Wash</h3>
 
-<h3>Velvet Matte Lipstick</h3>
+<div class="rating">
+★★★★★ 4.9
+</div>
 
 <p>
-Luxury matte lipstick with smooth premium finish.
+Brightens skin instantly and helps remove dullness, acne marks and impurities.
 </p>
 
-<div class="product-price">$39</div>
+<div class="buttons">
 
-<div class="product-buttons">
+<a class="buy" href="https://www.daraz.pk/" target="_blank">
+Buy Now
+</a>
 
-<button class="buy-btn" onclick="openProduct()">
-View Product
-</button>
-
-<button class="cart-btn" onclick="addCart()">
-Add Cart
-</button>
+<a class="details" href="120884.jpg" target="_blank">
+View
+</a>
 
 </div>
-
 </div>
-
 </div>
 
 <div class="product-card">
-
-<div class="badge">Trending</div>
-
-<img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1200&auto=format&fit=crop">
+<img src="120885.jpg">
 
 <div class="product-info">
 
-<div class="product-rating">
-★★★★★ (3,120 Reviews)
-</div>
+<h3>White Expert Cream</h3>
 
-<h3>Glow Foundation</h3>
+<div class="rating">
+★★★★★ 4.8
+</div>
 
 <p>
-Natural radiant foundation with smooth texture.
+Luxury brightening cream enriched with natural ingredients for glowing skin.
 </p>
 
-<div class="product-price">$48</div>
+<div class="buttons">
 
-<div class="product-buttons">
+<a class="buy" href="https://www.amazon.com/" target="_blank">
+Buy Now
+</a>
 
-<button class="buy-btn" onclick="openProduct()">
-View Product
-</button>
-
-<button class="cart-btn" onclick="addCart()">
-Add Cart
-</button>
+<a class="details" href="120885.jpg" target="_blank">
+View
+</a>
 
 </div>
-
 </div>
-
 </div>
 
 <div class="product-card">
-
-<div class="badge">Luxury</div>
-
-<img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?q=80&w=1200&auto=format&fit=crop">
+<img src="120886.jpg">
 
 <div class="product-info">
 
-<div class="product-rating">
-★★★★★ (5,203 Reviews)
-</div>
+<h3>Niacinamide Face Wash</h3>
 
-<h3>Luxury Perfume</h3>
+<div class="rating">
+★★★★★ 4.9
+</div>
 
 <p>
-Elegant fragrance inspired by timeless beauty.
+Deep cleansing formula designed for smooth and radiant skin every day.
 </p>
 
-<div class="product-price">$95</div>
+<div class="buttons">
 
-<div class="product-buttons">
+<a class="buy" href="https://www.ebay.com/" target="_blank">
+Buy Now
+</a>
 
-<button class="buy-btn" onclick="openProduct()">
-View Product
-</button>
+<a class="details" href="120886.jpg" target="_blank">
+View
+</a>
 
-<button class="cart-btn" onclick="addCart()">
-Add Cart
-</button>
+</div>
+</div>
+</div>
 
+<div class="product-card">
+<img src="120887.jpg">
+
+<div class="product-info">
+
+<h3>Charcoal Face Wash</h3>
+
+<div class="rating">
+★★★★★ 4.7
+</div>
+
+<p>
+Powerful charcoal cleansing for removing oil, dirt and pollution from skin.
+</p>
+
+<div class="buttons">
+
+<a class="buy" href="https://www.alibaba.com/" target="_blank">
+Buy Now
+</a>
+
+<a class="details" href="120887.jpg" target="_blank">
+View
+</a>
+
+</div>
+</div>
+</div>
+
+<div class="product-card">
+<img src="120888.jpg">
+
+<div class="product-info">
+
+<h3>6 in 1 Active Cleansing</h3>
+
+<div class="rating">
+★★★★★ 4.8
+</div>
+
+<p>
+Complete skincare cleansing formula for glowing and refreshed skin.
+</p>
+
+<div class="buttons">
+
+<a class="buy" href="https://www.shopify.com/" target="_blank">
+Buy Now
+</a>
+
+<a class="details" href="120888.jpg" target="_blank">
+View
+</a>
+
+</div>
+</div>
+</div>
+
+<div class="product-card">
+<img src="120889.jpg">
+
+<div class="product-info">
+
+<h3>Instant Glow Serum</h3>
+
+<div class="rating">
+★★★★★ 5.0
+</div>
+
+<p>
+Premium serum designed to hydrate skin and provide instant visible glow.
+</p>
+
+<div class="buttons">
+
+<a class="buy" href="https://www.walmart.com/" target="_blank">
+Buy Now
+</a>
+
+<a class="details" href="120889.jpg" target="_blank">
+View
+</a>
+
+</div>
+</div>
 </div>
 
 </div>
-
-</div>
-
-</div>
-
 </section>
 
-<section id="gallery">
+<section class="reviews" id="reviews">
 
-<div class="title">
+<h2 class="section-title">Customer Reviews</h2>
 
-<h2>Beauty Gallery</h2>
-
-<p>
-A luxury beauty experience designed to look authentic and premium.
-</p>
-
-</div>
-
-<div class="gallery">
-
-<a href="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=2200&auto=format&fit=crop" target="_blank">
-<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop">
-</a>
-
-<a href="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=2200&auto=format&fit=crop" target="_blank">
-<img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1200&auto=format&fit=crop">
-</a>
-
-<a href="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2200&auto=format&fit=crop" target="_blank">
-<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop">
-</a>
-
-</div>
-
-</section>
-
-<section id="reviews">
-
-<div class="title">
-
-<h2>Customer Reviews</h2>
-
-<p>
-Trusted by thousands of beauty customers worldwide.
-</p>
-
-</div>
-
-<div class="reviews">
+<div class="review-grid">
 
 <div class="review">
-
-<img src="https://randomuser.me/api/portraits/women/44.jpg">
-
-<div class="review-stars">★★★★★</div>
-
+<h4>Sarah Khan ★★★★★</h4>
 <p>
-“The products feel genuinely premium and the website experience looks luxurious.”
+I tried the Vitamin C face wash and my skin started looking brighter within days. Packaging and quality feel premium.
 </p>
-
-<h4>Sarah M.</h4>
-
 </div>
 
 <div class="review">
-
-<img src="https://randomuser.me/api/portraits/women/68.jpg">
-
-<div class="review-stars">★★★★★</div>
-
+<h4>Areeba Noor ★★★★★</h4>
 <p>
-“Beautiful packaging, elegant quality, and amazing customer experience.”
+The White Expert Cream gives a smooth glow and feels luxurious. Definitely worth trying.
 </p>
-
-<h4>Lina A.</h4>
-
 </div>
 
 <div class="review">
-
-<img src="https://randomuser.me/api/portraits/women/90.jpg">
-
-<div class="review-stars">★★★★★</div>
-
+<h4>Hina Ali ★★★★★</h4>
 <p>
-“One of the most stylish beauty brands I have seen online.”
+The serum is honestly one of the best products I used this year. Skin feels hydrated and fresh.
 </p>
-
-<h4>Emma R.</h4>
-
 </div>
 
+</div>
+</section>
+
+<section class="faq" id="faq">
+
+<h2 class="section-title">Frequently Asked Questions</h2>
+
+<div class="faq-box">
+<h3>Are RESHINE products suitable for all skin types?</h3>
+<p>
+Yes, our products are designed for normal, oily and dry skin types.
+</p>
+</div>
+
+<div class="faq-box">
+<h3>How long does delivery take?</h3>
+<p>
+Delivery usually takes 3 to 5 business days depending on location.
+</p>
+</div>
+
+<div class="faq-box">
+<h3>Can I use Vitamin C products daily?</h3>
+<p>
+Yes. Daily use helps maintain glowing and refreshed skin.
+</p>
 </div>
 
 </section>
 
-<section id="faq">
+<footer id="contact">
 
-<div class="title">
-
-<h2>Frequently Asked Questions</h2>
+<h2>RESHINE Cosmetics</h2>
 
 <p>
-Everything customers usually ask before ordering.
+Premium skincare collection for radiant beauty and glowing confidence.
+<br><br>
+Email: support@reshinebeauty.com
+<br>
+Instagram: @reshinebeauty
+<br><br>
+© 2025 RESHINE Cosmetics. All Rights Reserved.
 </p>
-
-</div>
-
-<div style="max-width:900px;margin:auto;">
-
-<details>
-<summary>Are IQ Cosmetics products cruelty-free?</summary>
-<p>
-Yes. All IQ Cosmetics products are cruelty-free and premium tested.
-</p>
-</details>
-
-<details>
-<summary>Do you offer international shipping?</summary>
-<p>
-Yes. IQ Cosmetics ships internationally with secure packaging.
-</p>
-</details>
-
-<details>
-<summary>Are products suitable for sensitive skin?</summary>
-<p>
-Most products are designed for all skin types including sensitive skin.
-</p>
-</details>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<div class="contact">
-
-<h2>Contact IQ Cosmetics</h2>
-
-<p>
-Connect with our beauty team for collaborations and inquiries.
-</p>
-
-<input type="text" id="name" placeholder="Your Name">
-
-<input type="email" id="email" placeholder="Your Email">
-
-<textarea id="message" placeholder="Your Message"></textarea>
-
-<button onclick="sendMessage()">
-Send Message
-</button>
-
-</div>
-
-</section>
-
-<footer>
-
-<div class="socials">
-
-<a href="https://instagram.com" target="_blank">
-<i class="fa-brands fa-instagram"></i>
-</a>
-
-<a href="https://facebook.com" target="_blank">
-<i class="fa-brands fa-facebook"></i>
-</a>
-
-<a href="https://twitter.com" target="_blank">
-<i class="fa-brands fa-x-twitter"></i>
-</a>
-
-<a href="https://youtube.com" target="_blank">
-<i class="fa-brands fa-youtube"></i>
-</a>
-
-</div>
-
-© 2026 IQ Cosmetics. All Rights Reserved.
 
 </footer>
 
-<script>
-
-const realProducts = [
-
-"https://www.sephora.com",
-"https://www.dior.com/en_us/beauty",
-"https://www.chanel.com/us/makeup",
-"https://www.yslbeautyus.com",
-"https://www.lancome-usa.com",
-"https://www.esteelauder.com",
-"https://www.hudabeauty.com",
-"https://www.fentybeauty.com",
-"https://www.charlottetilbury.com",
-"https://www.maccosmetics.com"
-
-];
-
-function openProduct(){
-
-let randomLink =
-realProducts[Math.floor(Math.random() * realProducts.length)];
-
-window.open(randomLink, "_blank");
-
-}
-
-function addCart(){
-
-let cart = localStorage.getItem("iqcart");
-
-if(cart == null){
-
-localStorage.setItem("iqcart",1);
-
-}else{
-
-localStorage.setItem("iqcart",Number(cart)+1);
-
-}
-
-alert("Product Added To Cart");
-
-}
-
-function buyNow(){
-
-window.open("https://www.sephora.com","_blank");
-
-}
-
-function sendMessage(){
-
-let name = document.getElementById("name").value;
-let email = document.getElementById("email").value;
-let message = document.getElementById("message").value;
-
-if(name === "" || email === "" || message === ""){
-
-alert("Please fill all fields.");
-
-}else{
-
-window.location.href =
-"mailto:iqcosmetics@email.com?subject=New Message From " +
-name +
-"&body=" +
-message;
-
-}
-
-}
-
-</script>
-
 </body>
 </html>
-```
