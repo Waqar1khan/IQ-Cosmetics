@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>IQ Cosmetics</title>
 
   <style>
@@ -10,141 +10,528 @@
       margin:0;
       padding:0;
       box-sizing:border-box;
+      font-family:Arial, sans-serif;
     }
 
     body{
-      font-family:Arial, sans-serif;
       background:#fff7fb;
-      color:#222;
+      color:#333;
     }
 
     header{
       background:linear-gradient(to right,#ffb6d9,#ffd6ea);
-      padding:30px 20px;
+      padding:20px;
       text-align:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
     }
 
     header h1{
-      font-size:40px;
-      color:#c2185b;
-      margin-bottom:10px;
+      font-size:32px;
+      color:#b30059;
     }
 
-    header p{
-      font-size:18px;
-      color:#444;
+    .top-buttons{
+      margin-top:15px;
+    }
+
+    .top-buttons button{
+      padding:10px 18px;
+      border:none;
+      border-radius:30px;
+      margin:5px;
+      background:#ff4da6;
+      color:white;
+      font-size:15px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .top-buttons button:hover{
+      background:#cc0066;
+      transform:scale(1.05);
     }
 
     .hero{
-      width:100%;
-    }
-
-    .hero img{
-      width:100%;
-      display:block;
-    }
-
-    .products{
-      padding:30px 15px;
-    }
-
-    .products h2{
       text-align:center;
-      margin-bottom:25px;
-      color:#c2185b;
-      font-size:32px;
+      padding:40px 20px;
+    }
+
+    .hero h2{
+      font-size:38px;
+      color:#cc0066;
+      margin-bottom:10px;
+    }
+
+    .hero p{
+      font-size:18px;
+      max-width:700px;
+      margin:auto;
+      line-height:1.6;
     }
 
     .gallery{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+      padding:30px;
     }
 
     .card{
       background:white;
-      border-radius:15px;
+      border-radius:20px;
       overflow:hidden;
-      box-shadow:0 4px 12px rgba(0,0,0,0.15);
+      box-shadow:0 4px 15px rgba(0,0,0,0.1);
       transition:0.3s;
     }
 
     .card:hover{
-      transform:translateY(-5px);
+      transform:translateY(-8px);
     }
 
     .card img{
       width:100%;
-      height:100%;
+      height:350px;
       object-fit:cover;
-      display:block;
+      cursor:pointer;
+      transition:0.4s;
+    }
+
+    .card img:hover{
+      transform:scale(1.03);
+    }
+
+    .card-content{
+      padding:18px;
+    }
+
+    .card-content h3{
+      color:#cc0066;
+      margin-bottom:10px;
+    }
+
+    .card-content p{
+      line-height:1.5;
+      font-size:15px;
+    }
+
+    .zoom-box{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.9);
+      display:none;
+      justify-content:center;
+      align-items:center;
+      z-index:9999;
+    }
+
+    .zoom-box img{
+      width:90%;
+      max-width:900px;
+      border-radius:15px;
+    }
+
+    .close{
+      position:absolute;
+      top:20px;
+      right:30px;
+      color:white;
+      font-size:40px;
+      cursor:pointer;
     }
 
     footer{
+      background:#ffebf5;
       text-align:center;
       padding:25px;
-      background:#ffd6ea;
-      margin-top:40px;
-      color:#444;
-      font-weight:bold;
+      margin-top:20px;
+      font-size:15px;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>IQ Cosmetics</h1>
-    <p>Luxury Beauty & Skincare Collection</p>
-  </header>
+<header>
+  <h1>IQ Cosmetics</h1>
 
-  <section class="hero">
-    <img src="Photo1.jpg" alt="IQ Cosmetics">
-  </section>
+  <div class="top-buttons">
+    <button>Home</button>
+    <button>Products</button>
+    <button>Gallery</button>
+    <button>Contact</button>
+  </div>
+</header>
 
-  <section class="products">
-    <h2>Our Products</h2>
+<section class="hero">
+  <h2>Luxury Beauty Collection</h2>
 
-    <div class="gallery">
+  <p>
+    Welcome to IQ Cosmetics. Discover premium skincare and beauty products
+    designed to give your skin a natural glow, freshness, and confidence.
+  </p>
+</section>
 
-      <div class="card">
-        <img src="Photo1.jpg" alt="">
-      </div>
+<section class="gallery">
 
-      <div class="card">
-        <img src="Photo2.jpg" alt="">
-      </div>
-
-      <div class="card">
-        <img src="Photo3.jpg" alt="">
-      </div>
-
-      <div class="card">
-        <img src="Photo4.jpg" alt="">
-      </div>
-
-      <div class="card">
-        <img src="Photo5.jpg" alt="">
-      </div>
-
-      <div class="card">
-        <img src="Photo6.jpg" alt="">
-      </div>
-
-      <div class="card">
-        <img src="Photo7.jpg" alt="">
-      </div>
-
-      <div class="card">
-        <img src="Photo8.jpg" alt="">
-      </div>
-
+  <div class="card">
+    <img src="Photo1.jpg" onclick="openZoom(this.src)">
+    <div class="card-content">
+      <h3>Reshine White Expert</h3>
+      <p>Brightening beauty cream and serum with natural ingredients for radiant and glowing skin.</p>
     </div>
-  </section>
+  </div>
 
-  <footer>
-    © 2025 IQ Cosmetics. All Rights Reserved.
-  </footer>
+  <div class="card">
+    <img src="Photo2.jpg" onclick="openZoom(this.src)">
+    <div class="card-content">
+      <h3>Vitamin C Face Wash</h3>
+      <p>Refreshing face wash enriched with Vitamin C for cleaner, brighter and healthier skin.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Photo3.jpg" onclick="openZoom(this.src)">
+    <div class="card-content">
+      <h3>Instant Glow Formula</h3>
+      <p>Advanced skincare formula designed to remove dullness and improve skin freshness instantly.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Photo4.jpg" onclick="openZoom(this.src)">
+    <div class="card-content">
+      <h3>Complete Beauty Collection</h3>
+      <p>A premium collection of beauty cream, serum and face wash for complete skincare care.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Photo5.jpg" onclick="openZoom(this.src)">
+    <div class="card-content">
+      <h3>Radiance Skincare</h3>
+      <p>Elegant skincare products made to improve brightness and natural skin glow every day.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Photo6.jpg" onclick="openZoom(this.src)">
+    <div class="card-content">
+      <h3>Brightening Cream</h3>
+      <p>Beauty cream with SPF protection and advanced brightening ingredients for glowing skin.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Photo7.jpg" onclick="openZoom(this.src)">
+    <div class="card-content">
+      <h3>Charcoal Face Wash</h3>
+      <p>Deep cleansing charcoal face wash for removing oil, dirt and impurities from the skin.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Photo8.jpg" onclick="openZoom(this.src)">
+    <div class="card-content">
+      <h3>6 in 1 Active Cleansing</h3>
+      <p>Advanced cleansing face wash for smoother, cleaner and healthier looking skin.</p>
+    </div>
+  </div>
+
+</section>
+
+<div class="zoom-box" id="zoomBox">
+  <span class="close" onclick="closeZoom()">&times;</span>
+  <img id="zoomImg">
+</div>
+
+<footer>
+  © 2025 IQ Cosmetics | Beauty & Skincare Collection
+</footer>
+
+<script>
+  function openZoom(src){
+    document.getElementById("zoomBox").style.display="flex";
+    document.getElementById("zoomImg").src=src;
+  }
+
+  function closeZoom(){
+    document.getElementById("zoomBox").style.display="none";
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IQ Cosmetics</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#fff7fb;
+      color:#333;
+    }
+
+    header{
+      background:linear-gradient(to right,#ffb6d9,#ffd6ea);
+      padding:20px;
+      text-align:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1{
+      font-size:32px;
+      color:#b30059;
+    }
+
+    .top-buttons{
+      margin-top:15px;
+    }
+
+    .top-buttons button{
+      padding:10px 18px;
+      border:none;
+      border-radius:30px;
+      margin:5px;
+      background:#ff4da6;
+      color:white;
+      font-size:15px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .top-buttons button:hover{
+      background:#cc0066;
+      transform:scale(1.05);
+    }
+
+    .hero{
+      text-align:center;
+      padding:40px 20px;
+    }
+
+    .hero h2{
+      font-size:38px;
+      color:#cc0066;
+      margin-bottom:10px;
+    }
+
+    .hero p{
+      font-size:18px;
+      max-width:700px;
+      margin:auto;
+      line-height:1.6;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+      padding:30px;
+    }
+
+    .card{
+      background:white;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 4px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    .card img{
+      width:100%;
+      height:350px;
+      object-fit:cover;
+      cursor:pointer;
+      transition:0.4s;
+    }
+
+    .card img:hover{
+      transform:scale(1.03);
+    }
+
+    .card-content{
+      padding:18px;
+    }
+
+    .card-content h3{
+      color:#cc0066;
+      margin-bottom:10px;
+    }
+
+    .card-content p{
+      line-height:1.5;
+      font-size:15px;
+    }
+
+    .zoom-box{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.9);
+      display:none;
+      justify-content:center;
+      align-items:center;
+      z-index:9999;
+    }
+
+    .zoom-box img{
+      width:90%;
+      max-width:900px;
+      border-radius:15px;
+    }
+
+    .close{
+      position:absolute;
+      top:20px;
+      right:30px;
+      color:white;
+      font-size:40px;
+      cursor:pointer;
+    }
+
+    footer{
+      background:#ffebf5;
+      text-align:center;
+      padding:25px;
+      margin-top:20px;
+      font-size:15px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>IQ Cosmetics</h1>
+
+  <div class="top-buttons">
+    <button>Home</button>
+    <button>Products</button>
+    <button>Gallery</button>
+    <button>Contact</button>
+  </div>
+</header>
+
+<section class="hero">
+  <h2>Luxury Beauty Collection</h2>
+
+  <p>
+    Welcome to IQ Cosmetics. Discover premium skincare and beauty products
+    designed to give your skin a natural glow, freshness, and confidence.
+  </p>
+</section>
+
+<section class="gallery">
+
+  <div class="card">
+    <img src="Photo1.jpg" onclick="openZoom(this.src)">
+    <div class="card-content">
+      <h3>Reshine White Expert</h3>
+      <p>Brightening beauty cream and serum with natural ingredients for radiant and glowing skin.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Photo2.jpg" onclick="openZoom(this.src)">
+    <div class="card-content">
+      <h3>Vitamin C Face Wash</h3>
+      <p>Refreshing face wash enriched with Vitamin C for cleaner, brighter and healthier skin.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Photo3.jpg" onclick="openZoom(this.src)">
+    <div class="card-content">
+      <h3>Instant Glow Formula</h3>
+      <p>Advanced skincare formula designed to remove dullness and improve skin freshness instantly.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Photo4.jpg" onclick="openZoom(this.src)">
+    <div class="card-content">
+      <h3>Complete Beauty Collection</h3>
+      <p>A premium collection of beauty cream, serum and face wash for complete skincare care.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Photo5.jpg" onclick="openZoom(this.src)">
+    <div class="card-content">
+      <h3>Radiance Skincare</h3>
+      <p>Elegant skincare products made to improve brightness and natural skin glow every day.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Photo6.jpg" onclick="openZoom(this.src)">
+    <div class="card-content">
+      <h3>Brightening Cream</h3>
+      <p>Beauty cream with SPF protection and advanced brightening ingredients for glowing skin.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Photo7.jpg" onclick="openZoom(this.src)">
+    <div class="card-content">
+      <h3>Charcoal Face Wash</h3>
+      <p>Deep cleansing charcoal face wash for removing oil, dirt and impurities from the skin.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Photo8.jpg" onclick="openZoom(this.src)">
+    <div class="card-content">
+      <h3>6 in 1 Active Cleansing</h3>
+      <p>Advanced cleansing face wash for smoother, cleaner and healthier looking skin.</p>
+    </div>
+  </div>
+
+</section>
+
+<div class="zoom-box" id="zoomBox">
+  <span class="close" onclick="closeZoom()">&times;</span>
+  <img id="zoomImg">
+</div>
+
+<footer>
+  © 2025 IQ Cosmetics | Beauty & Skincare Collection
+</footer>
+
+<script>
+  function openZoom(src){
+    document.getElementById("zoomBox").style.display="flex";
+    document.getElementById("zoomImg").src=src;
+  }
+
+  function closeZoom(){
+    document.getElementById("zoomBox").style.display="none";
+  }
+</script>
 
 </body>
 </html>
